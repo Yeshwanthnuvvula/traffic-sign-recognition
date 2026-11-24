@@ -1,0 +1,161 @@
+{
+  "total_trials": 12,
+  "experiments": [
+    {
+      "experiment_id": "svm_linear_C0.1",
+      "model_type": "SVM",
+      "hyperparameters": {
+        "C": 0.1,
+        "kernel": "linear",
+        "penalty": "l2"
+      },
+      "training_duration_s": 14.2,
+      "val_accuracy": 0.924,
+      "val_macro_f1": 0.928,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "svm_linear_C1.0",
+      "model_type": "SVM",
+      "hyperparameters": {
+        "C": 1.0,
+        "kernel": "linear",
+        "penalty": "l2"
+      },
+      "training_duration_s": 28.5,
+      "val_accuracy": 0.9385,
+      "val_macro_f1": 0.9412,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "svm_rbf_C1.0",
+      "model_type": "SVM",
+      "hyperparameters": {
+        "C": 1.0,
+        "kernel": "rbf",
+        "gamma": "scale"
+      },
+      "training_duration_s": 84.6,
+      "val_accuracy": 0.952,
+      "val_macro_f1": 0.956,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "svm_rbf_C10.0_optimal",
+      "model_type": "SVM",
+      "hyperparameters": {
+        "C": 10.0,
+        "kernel": "rbf",
+        "gamma": "scale"
+      },
+      "training_duration_s": 166.3,
+      "val_accuracy": 0.9713,
+      "val_macro_f1": 0.9752,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "knn_k3_uniform_euclidean",
+      "model_type": "KNN",
+      "hyperparameters": {
+        "n_neighbors": 3,
+        "weights": "uniform",
+        "metric": "euclidean"
+      },
+      "training_duration_s": 0.08,
+      "val_accuracy": 0.914,
+      "val_macro_f1": 0.9185,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "knn_k5_distance_euclidean_optimal",
+      "model_type": "KNN",
+      "hyperparameters": {
+        "n_neighbors": 5,
+        "weights": "distance",
+        "metric": "euclidean"
+      },
+      "training_duration_s": 0.12,
+      "val_accuracy": 0.9273,
+      "val_macro_f1": 0.9357,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "knn_k7_distance_manhattan",
+      "model_type": "KNN",
+      "hyperparameters": {
+        "n_neighbors": 7,
+        "weights": "distance",
+        "metric": "manhattan"
+      },
+      "training_duration_s": 0.15,
+      "val_accuracy": 0.9085,
+      "val_macro_f1": 0.912,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "rf_trees50_depth15",
+      "model_type": "Random Forest",
+      "hyperparameters": {
+        "n_estimators": 50,
+        "max_depth": 15
+      },
+      "training_duration_s": 3.8,
+      "val_accuracy": 0.887,
+      "val_macro_f1": 0.884,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "rf_trees100_depth25_optimal",
+      "model_type": "Random Forest",
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 25
+      },
+      "training_duration_s": 7.06,
+      "val_accuracy": 0.9197,
+      "val_macro_f1": 0.9207,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "rf_trees150_depthNone",
+      "model_type": "Random Forest",
+      "hyperparameters": {
+        "n_estimators": 150,
+        "max_depth": null
+      },
+      "training_duration_s": 12.4,
+      "val_accuracy": 0.921,
+      "val_macro_f1": 0.9224,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "cnn_3block_lr1e3_optimal",
+      "model_type": "Custom CNN",
+      "hyperparameters": {
+        "epochs": 10,
+        "batch_size": 64,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "dropout": 0.3
+      },
+      "training_duration_s": 446.7,
+      "val_accuracy": 0.9983,
+      "val_macro_f1": 0.9981,
+      "status": "COMPLETED"
+    },
+    {
+      "experiment_id": "resnet18_transfer_lr3e4_optimal",
+      "model_type": "ResNet-18",
+      "hyperparameters": {
+        "epochs": 8,
+        "batch_size": 64,
+        "lr": 0.0003,
+        "weight_decay": 0.0001
+      },
+      "training_duration_s": 520.0,
+      "val_accuracy": 0.9969,
+      "val_macro_f1": 0.9965,
+      "status": "COMPLETED"
+    }
+  ]
+}

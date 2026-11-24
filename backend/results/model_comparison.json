@@ -1,0 +1,132 @@
+{
+  "models": [
+    {
+      "model_id": "svm",
+      "model_name": "Support Vector Machine (SVM)",
+      "accuracy": 0.9713,
+      "macro_f1": 0.9752,
+      "weighted_f1": 0.9714,
+      "precision": 0.972,
+      "recall": 0.9713,
+      "train_time_seconds": 166.3,
+      "inference_latency_ms": 7.22
+    },
+    {
+      "model_id": "knn",
+      "model_name": "K-Nearest Neighbors (KNN)",
+      "accuracy": 0.9273,
+      "macro_f1": 0.9357,
+      "weighted_f1": 0.9277,
+      "precision": 0.931,
+      "recall": 0.9273,
+      "train_time_seconds": 0.0,
+      "inference_latency_ms": 0.29
+    },
+    {
+      "model_id": "rf",
+      "model_name": "Random Forest",
+      "accuracy": 0.9197,
+      "macro_f1": 0.9207,
+      "weighted_f1": 0.919,
+      "precision": 0.9223,
+      "recall": 0.9197,
+      "train_time_seconds": 7.06,
+      "inference_latency_ms": 0.01
+    },
+    {
+      "model_id": "custom_cnn",
+      "model_name": "Custom TrafficSignCNN",
+      "accuracy": 0.9983,
+      "macro_f1": 0.9987,
+      "weighted_f1": 0.9983,
+      "precision": 0.9984,
+      "recall": 0.9983,
+      "train_time_seconds": 446.68,
+      "inference_latency_ms": 0.42
+    },
+    {
+      "model_id": "resnet18",
+      "model_name": "ResNet-18 (Transfer Learning)",
+      "accuracy": 0.9986,
+      "macro_f1": 0.9987,
+      "weighted_f1": 0.9986,
+      "precision": 0.9986,
+      "recall": 0.9986,
+      "train_time_seconds": 543.56,
+      "inference_latency_ms": 0.58
+    }
+  ],
+  "speed_limit_30_vs_50_analysis": {
+    "svm": {
+      "class_1_speed_30": {
+        "total": 168,
+        "correct": 155,
+        "misclassified_as_50": 6,
+        "recall": 0.9226
+      },
+      "class_2_speed_50": {
+        "total": 172,
+        "correct": 159,
+        "misclassified_as_30": 1,
+        "recall": 0.9244
+      }
+    },
+    "knn": {
+      "class_1_speed_30": {
+        "total": 168,
+        "correct": 139,
+        "misclassified_as_50": 5,
+        "recall": 0.8274
+      },
+      "class_2_speed_50": {
+        "total": 172,
+        "correct": 146,
+        "misclassified_as_30": 2,
+        "recall": 0.8488
+      }
+    },
+    "rf": {
+      "class_1_speed_30": {
+        "total": 213,
+        "correct": 169,
+        "misclassified_as_50": 18,
+        "recall": 0.7934
+      },
+      "class_2_speed_50": {
+        "total": 219,
+        "correct": 189,
+        "misclassified_as_30": 3,
+        "recall": 0.863
+      }
+    },
+    "custom_cnn": {
+      "class_1_speed_30": {
+        "total": 444,
+        "correct": 444,
+        "misclassified_as_50": 0,
+        "recall": 1.0
+      },
+      "class_2_speed_50": {
+        "total": 450,
+        "correct": 450,
+        "misclassified_as_30": 0,
+        "recall": 1.0
+      }
+    },
+    "resnet18": {
+      "class_1_speed_30": {
+        "total": 444,
+        "correct": 443,
+        "misclassified_as_50": 0,
+        "recall": 0.9977
+      },
+      "class_2_speed_50": {
+        "total": 450,
+        "correct": 449,
+        "misclassified_as_30": 0,
+        "recall": 0.9978
+      }
+    }
+  },
+  "selected_best_model": "custom_cnn"
+}

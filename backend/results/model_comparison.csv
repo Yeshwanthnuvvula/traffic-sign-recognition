@@ -1,0 +1,6 @@
+model_id,model_name,accuracy,macro_f1,weighted_f1,precision,recall,train_time_seconds,inference_latency_ms
+svm,Support Vector Machine (SVM),0.9713,0.9752,0.9714,0.972,0.9713,166.3,7.22
+knn,K-Nearest Neighbors (KNN),0.9273,0.9357,0.9277,0.931,0.9273,0.0,0.29
+rf,Random Forest,0.9197,0.9207,0.919,0.9223,0.9197,7.06,0.01
+custom_cnn,Custom TrafficSignCNN,0.9983,0.9987,0.9983,0.9984,0.9983,446.68,0.42
+resnet18,ResNet-18 (Transfer Learning),0.9986,0.9987,0.9986,0.9986,0.9986,543.56,0.58
